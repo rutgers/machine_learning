@@ -17,7 +17,7 @@ X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_
 
 
 model = svm.SVC()
-model.fit(X,y)
+model.fit(X_train,y_train)
 
 #pred =  model.predict([[2,2,2,2]])
 pred = model.predict(X_test)
