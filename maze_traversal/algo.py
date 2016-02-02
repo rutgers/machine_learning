@@ -14,6 +14,13 @@ def heuristic(a,b):
 def get_neighbors(cell,grid):
 	''' Use this to retrieve all unblocked neighbors '''
 	
+def in_closed_list(closed_list,cell):
+	for item in closed_list:
+		if cell.equals(item):
+			return True
+
+	return False
+
 
 def init_grid(grid,goal):	
 	''' Initialize the grid '''
