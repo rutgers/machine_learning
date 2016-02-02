@@ -30,20 +30,17 @@ if __name__ == '__main__':
 	pp = pprint.PrettyPrinter()
 
 	if len(sys.argv) != 3:
-		print "Format: python main.py <path to maze file> <tiebreak val: 1 for smaller g, 0 for larger g>"
+		print "Format: python main.py <path to maze file>"
 		sys.exit(1)
 	else:
 		maze_file = sys.argv[1]
 
-	# for i in range(1,11):
-	# 	grid = env.generate_grid(10)
-	# 	env.write_csv(grid,'mazes/small_mazes/small_maze_{0}.csv'.format(i))
 
-	grid, size = env.read_grid('mazes/small_mazes/small_maze_2.csv')
+	grid, size = env.read_grid(maze_file)
 
 	algo.print_grid(grid)
-	# start = Cell(0,0,101)
-	# goal = Cell(100,100,101)
+	start = Cell(0,0,101)
+	goal = Cell(100,100,101)
 
 	''' 
 	Use this space to begin manipulating the agent, reading in the maze from the csv file,
