@@ -8,21 +8,6 @@ import csv
 from cell import Cell
 # import pdb
 
-
-
-def create_mazes():
-	''' This function should generate 10 grids, as a list of lists, with size 100x100.
-		You can use existing code or write your own for this.
-	'''
-
-def get_start_and_goal(grid):
-	'''
-	Use this function to decide where the Agent will start and what its goal is
-	'''
-
-
-
-
 if __name__ == '__main__':
 
 	# Get rid of the .pyc files that get generated on each run
