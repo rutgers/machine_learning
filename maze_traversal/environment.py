@@ -92,7 +92,7 @@ def write_csv(grid,output_file):
 
 	f.close()
 
-# Read grid from input file. Returns fully populated grid
+# Read grid from input file. Returns fully populated grid of Cell objects
 def read_grid(input_file):
 	f = open(input_file,'r')
 

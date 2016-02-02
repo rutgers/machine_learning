@@ -1,12 +1,12 @@
 class Cell:
 
-	def __init__(self,i=0,j=0,size=0):
+	def __init__(self,x=0,y=0,size=0):
 		self.g_val = 1000000
 		self.f_val = 1000000
 		self.h_val = 0
 		self.search_val = 0
-		self.x = i
-		self.y = j
+		self.x = x
+		self.y = y
 		self.status = 'x'
 		self.parent = None
 		self.hash_value = (self.x * size) + self.y

@@ -2,11 +2,22 @@ from binary_heap import BHeap
 import datetime
 import math
 import environment as env
+import pprint
 from agent import Agent
 from cell import Cell
 # import pdb
+pp = pprint.PrettyPrinter()
 
 infinity = 1000000 
+
+def print_grid(grid):
+
+	matrix = [['x' for i in range(len(grid[0]))] for j in range(len(grid[0]))]
+	for i in range(10):
+		for j in range(10):
+			matrix[i][j] = grid[i][j].status
+
+	pp.pprint(matrix)
 
 def heuristic(a,b):
 	''' Define your heuristic here. You can choose the Manhattan Distance as a starting point'''
