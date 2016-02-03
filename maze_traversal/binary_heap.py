@@ -12,7 +12,7 @@ DO NOT MODIFY THIS FILE
 class BHeap:
 	'Binary Min-Heap class implemented using an array. Takes Cell object as parameters'
 
-	def __init__(self,size,tie_val = 0):
+	def __init__(self,size = 100,tie_val = 0):
 		self.heap = [0]
 		self.tie_break = tie_val # 0 = break in favor of larger g, 1 = break in favor of smaller g
 		self.c = (size**2) * 10

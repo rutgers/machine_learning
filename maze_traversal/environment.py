@@ -1,15 +1,11 @@
 import csv
-import pprint
 import random
 import sys
 from cell import Cell
-import pdb
 
 ###########################
 # DO NOT MODIFY THIS FILE #
 ###########################
-
-
 
 
 
@@ -105,7 +101,7 @@ def read_grid(input_file):
 			grid = [['x' for i in range(size)] for j in range(size)]
 		else:
 			i = int(row[0])
-			j = int(row[1])	
+			j = int(row[1])
 			grid[i][j] = row[2]
 
 	converted_grid = tuples_to_objects(grid)
@@ -118,7 +114,7 @@ def generate_grid(size):
 	grid = [["x" for i in range(size)] for j in range(size)]
 
 	# Initialize algorithm
-	visited = list()	
+	visited = list()
 	unvisited = list() # Maybe make this a BST? For efficiency's sake
 	stack = list() # append() adds to the end of the list, pop() without arguments removes last element in the list
 
@@ -180,7 +176,7 @@ def tuples_to_objects(grid):
 		for j in range(size):
 			object_grid[i][j] = Cell(i,j,size)
 			object_grid[i][j].status = grid[i][j]
- 
+
 	return object_grid
 
 def print_cells(grid):

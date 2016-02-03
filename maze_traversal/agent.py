@@ -1,4 +1,3 @@
-
 import environment as env
 import algo
 from cell import Cell

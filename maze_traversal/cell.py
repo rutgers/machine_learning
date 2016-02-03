@@ -12,6 +12,8 @@ class Cell:
 		self.hash_value = (self.x * size) + self.y
 		self.heap_val = None
 
+	def isBlocked(self):
+		return self.status == 'b'
 
 	def equals(self,second):
 		if self.x == second.x and self.y == second.y:
