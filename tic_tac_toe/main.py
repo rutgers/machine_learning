@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
 	while not won or not stalemate:
 		print "This is the current state of the board:\n"
-
+	
 		test.display()
 
 		inputs = raw_input("Enter the coordinates of your move as a comma-separated list (ex.: x,y): ")
@@ -33,7 +33,9 @@ if __name__ == '__main__':
 		x = inputs[0]
 		y = inputs[1]
 
-		test.set_value(int(x),int(y),'x')
+		if test.set_value(int(x),int(y),'x') == False:
+			print "wowowewa"
+			continue
 
 		# AI makes move here. We will write this using our knowledge of adversarial search.
 
@@ -41,9 +43,11 @@ if __name__ == '__main__':
 		if result == 1:
 			won = True
 			won_by_user = True
+			stalemate = True
 		elif result == 2:
 			won = True
 			won_by_ai = True
+			stalemate = True
 		elif test.stalemate():
 			stalemate = True
 
