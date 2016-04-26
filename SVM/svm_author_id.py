@@ -9,8 +9,7 @@
     Chris has label 1
 
 """
-import site
-site.addsitedir('/Users/Anush/anaconda/lib/python2.7/site-packages')
+
 import sys
 from time import time
 #sys.path.append("../tools/")
